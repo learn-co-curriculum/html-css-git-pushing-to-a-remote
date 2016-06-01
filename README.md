@@ -6,30 +6,32 @@ The Simons Stamp Collection Saga continues... In this lesson we will learn the b
 
 ## Objectives
 
-1. The Benefits of storing code remotely.
-2. Create new remote repository.
-3. Adding new remotes to your local repository.
-4. Pushing commits to your remote origin. 
+1. List the benefits of storing code remotely
+2. Create a new remote repository
+3. Add new remotes to your local repository
+4. Push commits to your remote origin
 
 ## You'z A Real Fine Repo, Won't You Back That Thing Up!
 
 Watch the video below if you are unfamiliar with Git. We will be using Git to access course materials and to share and collaborate on project code throughout this course. After watching the video you may use the text below to review all of the topics discussed in the video.
 
+**Note** that the video uses your computer's terminal, but in this course, you'll be using the Learn IDE and all Git commands will work the same way on it as it does on your terminal.
+
 <iframe width="640" height="480" src="https://www.youtube.com/embed/y8ZBIp2moDY?rel=0" frameborder="0" allowfullscreen></iframe>
 
 ### Benefits of Syncing With A Remote
 
-So far, we have learned how to create new repositories, stage files, and commit our changes, as well as how to log our commits and even how to reset back to a previous commit. Now lets look at a way to safely backup our code and place it in a remote location that we can easily share with others. Murphys Law States that "anything that can go wrong, will go wrong". Sometimes our hardware breaks, and when we have important code it's not enough to keep a local copy. By making our local repository (the one thats on your computer) aware of a remote location we can push our code up to, we insure that if anything happens to our copy there is another copy elsewhere. As mentioned this also creates an ideal way to share our code with others.
+So far, we have learned how to create new repositories, stage files, and commit our changes, as well as how to log our commits and even how to reset back to a previous commit. Now let's look at a way to safely backup our code and place it in a remote location that we can easily share with others. Murphy's Law States that "anything that can go wrong, will go wrong". Sometimes our hardware breaks, and when we have important code it's not enough to keep a local copy. By making our local repository (the one that's on your computer) aware of a remote location we can push our code up to, we ensure that if anything happens to our copy there is another copy elsewhere. As mentioned this also creates an ideal way to share our code with others.
 
 ### Using Github to create 
 
-To start out let's take a look at Github.com. As their website states "GitHub is how people build software". This site offers free public and paid private space to host Git repositories online. It also gives us tools for making copies of others code, communicating and commenting on code, and posting issues about code.
+To start out let's take a look at Github.com. As their website states "GitHub is how people build software". This site offers free public and paid private space to host Git repositories online. It also gives us tools for making copies of others' code, communicating and commenting on code, and posting issues about code.
 
-Let's start out by creating a new repositiory on Github to sync to our local repo. After logging in, click the **+** plus symbol located at the top right navigation. then select **new repository**. Under repository name lets fill in the same name as our local repo `simon-stamp-collection`. Then click **Create Repository**. Then under Quick Setup copy the SSH url and head back to Terminal and type: `git remote add origin <paste your SSH url here>` for example my command was: **git remote add origin git@github.com:jongrover/simon-stamp-collection.git**. Then press return. What we did here was we linked our local repository to a new remote labeled "origin" and pointed it to the SSH location of the remote repository on Github. The label "origin" is merely a naming convention that refers to your personal copy of the remote repository.
+Let's start out by creating a new repository on Github to sync to our local repo. After logging in, click the **+** plus symbol located at the top right navigation. then select **new repository**. Under repository name let's fill in the same name as our local repo `simon-stamp-collection`. Then click **Create Repository**. Then under Quick Setup copy the SSH url and head back to the terminal in your Learn IDE and type: `git remote add origin <paste your SSH url here>` for example my command was: **git remote add origin git@github.com:jongrover/simon-stamp-collection.git**. Then press return. What we did here was we linked our local repository to a new remote labeled "origin" and pointed it to the SSH location of the remote repository on Github. The label "origin" is merely a naming convention that refers to your personal copy of the remote repository.
 
-*Note: I used an SSH url to link to my remote, we could have also used HTTP by clicking the button for HTTP from the Quick Setup Section on the Github page after creating the repo. HTTP require sthat you insert your username and password each time you push or pull to/from a remote. The advatage of SSH is that Github identifies you have permission to push and pull based on the matching of public and private SSH keys (sort of a digital handshake). This way you there is no need to enter a username or password to push and pull. Most likely your SSH keys have already been steup during your environment setup for this course. If not you can follow the instructions from the resource links at the bottom of this lesson.* 
+*Note: I used an SSH url to link to my remote. We could have also used HTTP by clicking the button for HTTP from the Quick Setup Section on the Github page after creating the repo. HTTP requires that you insert your username and password each time you push or pull to/from a remote. The advatage of SSH is that Github identifies you have permission to push and pull based on the matching of public and private SSH keys (sort of a digital handshake). This way you there is no need to enter a username or password to push and pull. Most likely your SSH keys have already been steup during your environment setup for this course. If not you can follow the instructions from the resource links at the bottom of this lesson.* 
 
-Now our local repo (repository) is aware of a rmeote location we can read and write to. This will aloow us to easily backup our commits and share our code with others.
+Now our local repo (repository) is aware of a remote location we can read and write to. This will aloow us to easily backup our commits and share our code with others.
 
 ### Listing Remotes
 
@@ -62,7 +64,7 @@ Inside all repositories there lives a hidden **.git** folder. We can see it by t
     merge = refs/heads/master
 ```
 
-This file contains the configurtion details for our repo. Note that here we can also see the remotes such as `[remote "origin"]` which is pointing to `url = git@github.com:jongrover/simon-stamp-collection.git`. If we ever wanted to change the location this remote is pointing to we could simply replace the url following the `url =`, save the file and exit. In our case everyhting appears as it should so we will close out this file for now and head back to Temrinal.
+This file contains the configuration details for our repo. Note that here we can also see the remotes such as `[remote "origin"]` which is pointing to `url = git@github.com:jongrover/simon-stamp-collection.git`. If we ever wanted to change the location this remote is pointing to we could simply replace the url following the `url =`, save the file and exit. In our case everyhting appears as it should so we will close out this file for now and head back to Temrinal.
 
 ### Push
 
