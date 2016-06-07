@@ -4,6 +4,7 @@
 
 The Simons Stamp Collection Saga continues... In this lesson we will learn the benefits of pushing our code to remote servers.
 
+This lesson continues from the prior one and will build on the files and folders that you've already created. Make sure you do all the lessons in this unit in order!
 ## Objectives
 
 1. List the benefits of storing code remotely
@@ -15,7 +16,7 @@ The Simons Stamp Collection Saga continues... In this lesson we will learn the b
 
 Watch the video below if you are unfamiliar with Git. We will be using Git to access course materials and to share and collaborate on project code throughout this course. After watching the video you may use the text below to review all of the topics discussed in the video.
 
-**Note** that the video uses your computer's terminal, but in this course, you'll be using the Learn IDE and all Git commands will work the same way on it as it does on your terminal.
+**Note** that the video uses your computer's terminal, but in this course, you'll be using the Learn IDE and the Git commands that you learn in this lesson will work the same way on it as it does on your terminal.
 
 <iframe width="640" height="480" src="https://www.youtube.com/embed/y8ZBIp2moDY?rel=0" frameborder="0" allowfullscreen></iframe>
 
