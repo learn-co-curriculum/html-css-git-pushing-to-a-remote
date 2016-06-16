@@ -28,11 +28,11 @@ So far, we have learned how to create new repositories, stage files, and commit 
 
 To start out let's take a look at Github.com. As their website states "GitHub is how people build software". This site offers free public and paid private space to host Git repositories online. It also gives us tools for making copies of others' code, communicating and commenting on code, and posting issues about code.
 
-Let's start out by creating a new repository on Github to sync to our local repo. After logging in, click the **+** plus symbol located at the top right navigation. then select **new repository**. Under repository name let's fill in the same name as our local repo `simon-stamp-collection`. Then click **Create Repository**. Then under Quick Setup copy the SSH url and head back to the terminal in your Learn IDE and type: `git remote add origin <paste your SSH url here>` for example my command was: **git remote add origin git@github.com:jongrover/simon-stamp-collection.git**. Then press return. What we did here was we linked our local repository to a new remote labeled "origin" and pointed it to the SSH location of the remote repository on Github. The label "origin" is merely a naming convention that refers to your personal copy of the remote repository.
+Let's start out by creating a new repository on Github to sync to our local repo. After logging in, click the **+** plus symbol located at the top right navigation. Then select **new repository**. Under repository name let's fill in the same name as our local repo `simon-stamp-collection`. Then click **Create Repository**. Then under Quick Setup copy the SSH url and head back to the terminal in your Learn IDE and type: `git remote add origin <paste your SSH url here>` for example my command was: **git remote add origin git@github.com:jongrover/simon-stamp-collection.git**. Then press return. What we did here was link our local repository to a new remote labeled "origin" and pointed it to the SSH location of the remote repository on Github. The label "origin" is merely a naming convention that refers to your personal copy of the remote repository.
 
-*Note: I used an SSH url to link to my remote. We could have also used HTTP by clicking the button for HTTP from the Quick Setup Section on the Github page after creating the repo. HTTP requires that you insert your username and password each time you push or pull to/from a remote. The advatage of SSH is that Github identifies you have permission to push and pull based on the matching of public and private SSH keys (sort of a digital handshake). This way you there is no need to enter a username or password to push and pull. Most likely your SSH keys have already been steup during your environment setup for this course. If not you can follow the instructions from the resource links at the bottom of this lesson.* 
+*Note: I used an SSH url to link to my remote. We could have also used HTTP by clicking the button for HTTP from the Quick Setup Section on the Github page after creating the repo. HTTP requires that you insert your username and password each time you push or pull to/from a remote. The advatage of SSH is that Github identifies you have permission to push and pull based on the matching of public and private SSH keys (sort of a digital handshake). This way there is no need to enter a username or password to push and pull. Most likely your SSH keys have already been set up during your environment set up for this course. If not, you can follow the instructions from the resource links at the bottom of this lesson.* 
 
-Now our local repo (repository) is aware of a remote location we can read and write to. This will aloow us to easily backup our commits and share our code with others.
+Now our local repo (repository) is aware of a remote location we can read and write to. This will allow us to easily back up our commits and share our code with others.
 
 ### Listing Remotes
 
@@ -69,7 +69,7 @@ This file contains the configuration details for our repo. Note that here we can
 
 ### Push
 
-Now that we have added a remote using the `git remote add <Your SSH URL>`. We now have the ability to write our local code up to our remote. To do so we use the push command. In Temrinal type: `git push -u origin master` then press return. This should output a respinse such as the following.
+Now that we have added a remote using the `git remote add <Your SSH URL>`. We now have the ability to write our local code up to our remote. To do so we use the push command. In Terminal type: `git push -u origin master` then press return. This should output a response such as the following.
 
 ```shell
 Counting objects: 6, done.
@@ -82,7 +82,7 @@ To git@github.com:jongrover/simon-stamp-collection.git
 Branch master set up to track remote branch master from origin.
 ```
 
-Let's look over our command: `git push -u origin master` The command push accepts flags (options), then the remote name, then the branch name. Here our option -u sets up tracking between our local branch and our remote branch so we know if one is ever ahead or behind the other in terms of commits. This is reccomended only to do once the first time we push new branches. After that we can leave it out for existing branches as simply `git push origin master`. THe next argument is the remote name "origin" and finally the branch we are pushing "master".
+Let's look over our command: `git push -u origin master` The command `push` accepts flags (options), then the remote name, then the branch name. Here our option -u sets up tracking between our local branch and our remote branch so we know if one is ever ahead or behind the other in terms of commits. This is recommended only to do once the first time we push new branches. After that we can leave it out for existing branches as simply `git push origin master`. THe next argument is the remote name "origin" and finally the branch we are pushing "master".
 
 Now if you head back to this repository in your browser at Github.com and refresh the page you will see our files appears in a file list and below our README is displayed. Neat! You just wrote your work to a remote. :)
 
