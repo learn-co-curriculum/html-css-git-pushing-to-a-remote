@@ -47,7 +47,11 @@ This indicates a single remote called "origin" that we can read (fetch) from and
 
 ### The Hidden .git Folder
 
-Inside all repositories there lives a hidden **.git** folder. We can see it by typing `ls -a` to list and display all hidden files and folders. We can see it is present inside our **simons-stamp-collection** folder. Let's open this folder up inside of our code editor. Then click to open the **config** file. It should look something like this:
+Inside all repositories there lives a hidden **.git** folder. We can see it by typing `ls -a` to list and display all hidden files and folders. We can see it is present inside our **simons-stamp-collection** folder. Let's open this folder up inside of our code editor. Then click to open the **config** file. 
+
+With the LearnIDE, type `cat .git/config` to view the hidden file within the terminal. 
+
+It should look something like this:
 
 ```shell
 [core]
